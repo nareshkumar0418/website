@@ -1,119 +1,43 @@
-/* Reset default margin and padding */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Page</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
 
-/* Body styling */
-body {
-    font-family: Arial, sans-serif;
-    background-color: #f1f1f1;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-}
+    <div class="login-container">
+        <h2>Login</h2>
+        <p class="subheading">Please enter your credentials to access your account.</p>
 
-/* Login container styling */
-.login-container {
-    background-color: white;
-    padding: 40px;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    width: 100%;
-    max-width: 400px;
-    text-align: center;
-}
+        <form id="loginForm">
+            <div class="input-group">
+                <label for="username">Username</label>
+                <input type="text" id="username" name="username" required placeholder="Enter your username">
+            </div>
 
-/* Heading */
-h2 {
-    margin-bottom: 10px;
-    color: #333;
-}
+            <div class="input-group">
+                <label for="password">Password</label>
+                <input type="password" id="password" name="password" required placeholder="Enter your password">
+            </div>
 
-/* Subheading */
-.subheading {
-    margin-bottom: 20px;
-    color: #666;
-    font-size: 14px;
-}
+            <div class="forgot-password">
+                <a href="#" id="forgot-password-link">Forgot Password?</a>
+            </div>
 
-/* Input fields styling */
-.input-group {
-    margin-bottom: 20px;
-    text-align: left;
-}
+            <button type="submit">Login</button>
 
-label {
-    display: block;
-    font-size: 14px;
-    margin-bottom: 5px;
-    color: #555;
-}
+            <p id="error-message" style="color: red; display: none;">Invalid username or password.</p>
 
-input {
-    width: 100%;
-    padding: 12px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    font-size: 16px;
-    color: #333;
-}
+        </form>
 
-input:focus {
-    border-color: #4CAF50;
-    outline: none;
-}
+        <div class="signup-link">
+            <p>Don't have an account? <a href="#">Sign up</a></p>
+        </div>
+    </div>
 
-/* Forgot Password link */
-.forgot-password {
-    margin-bottom: 20px;
-}
-
-#forgot-password-link {
-    font-size: 14px;
-    color: #4CAF50;
-    text-decoration: none;
-}
-
-#forgot-password-link:hover {
-    text-decoration: underline;
-}
-
-/* Button styling */
-button {
-    width: 100%;
-    padding: 12px;
-    background-color: #4CAF50;
-    color: white;
-    border: none;
-    border-radius: 4px;
-    font-size: 16px;
-    cursor: pointer;
-}
-
-button:hover {
-    background-color: #45a049;
-}
-
-/* Error message */
-#error-message {
-    margin-top: 10px;
-    color: red;
-    font-size: 14px;
-}
-
-/* Sign up link */
-.signup-link {
-    margin-top: 20px;
-}
-
-.signup-link a {
-    color: #4CAF50;
-    text-decoration: none;
-}
-
-.signup-link a:hover {
-    text-decoration: underline;
-}
+    <script src="script.js"></script>
+</body>
+</html>
