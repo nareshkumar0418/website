@@ -3,147 +3,25 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Naresh's personal website - Computer Science enthusiast">
-    <title>Naresh - Computer Science</title>
+    <title>Login Page</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <header>
-        <nav>
-            <ul>
-                <li><a href="#about">About</a></li>
-                <li><a href="#projects">Projects</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-        </nav>
-    </header>
-
-    <section id="home">
-        <h1>Welcome to My Website</h1>
-        <p>Hi, I'm Naresh! I'm passionate about Computer Science and technology. Explore my site to learn more about me and my work!</p>
-    </section>
-
-    <section id="about">
-        <h2>About Me</h2>
-        <p>I am a Computer Science enthusiast with a love for problem-solving and coding. I specialize in software development, algorithms, and AI. I enjoy building projects that solve real-world problems.</p>
-    </section>
-
-    <section id="projects">
-        <h2>Projects</h2>
-        <p>Here are some of the projects I have worked on:</p>
-        <ul>
-            <li><strong>Project 1:</strong> A web application for task management.</li>
-            <li><strong>Project 2:</strong> A Python-based data analysis tool.</li>
-            <li><strong>Project 3:</strong> A machine learning model for predicting outcomes based on historical data.</li>
-        </ul>
-    </section>
-
-    <section id="contact">
-        <h2>Contact</h2>
-        <p>If you want to get in touch, feel free to reach out to me!</p>
-        <form action="#">
-            <label for="email">Email:</label><br>
-            <input type="email" id="email" name="email" required><br><br>
-            <label for="message">Message:</label><br>
-            <textarea id="message" name="message" rows="4" required></textarea><br><br>
-            <button type="submit">Send Message</button>
-        </form>
-    </section>
-
-    <footer>
-        <p>&copy; 2024 Naresh - All Rights Reserved.</p>
-    </footer>
-
-    <script src="script.js"></script>
-</body>
-</html>
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Personal portfolio of [Your Name] showcasing my skills and projects">
-    <title>[Your Name] | Portfolio</title>
-    <link rel="stylesheet" href="styles.css">
-</head>
-<body>
-
-    <!-- Header Section -->
-    <header>
-        <nav>
-            <ul>
-                <li><a href="#home">Home</a></li>
-                <li><a href="#about">About</a></li>
-                <li><a href="#projects">Projects</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-        </nav>
-    </header>
-
-    <!-- Home Section -->
-    <section id="home" class="home">
-        <h1>Hello, I'm [Your Name]</h1>
-        <p>Web Developer | Designer | Problem Solver</p>
-    </section>
-
-    <!-- About Section -->
-    <section id="about" class="about">
-        <h2>About Me</h2>
-        <p>I'm a passionate web developer with a strong focus on front-end technologies like HTML, CSS, and JavaScript. I enjoy creating beautiful and functional websites that provide excellent user experiences.</p>
-        <p>My skills include:</p>
-        <ul>
-            <li>HTML, CSS, JavaScript</li>
-            <li>React, Node.js</li>
-            <li>UI/UX Design</li>
-            <li>Version Control (Git)</li>
-        </ul>
-    </section>
-
-    <!-- Projects Section -->
-    <section id="projects" class="projects">
-        <h2>My Projects</h2>
-        <div class="project-list">
-            <div class="project">
-                <h3>Project 1: Portfolio Website</h3>
-                <p>Description of your first project goes here. You can explain what technologies were used and the features it includes.</p>
-                <a href="#" target="_blank">View Project</a>
+    <div class="login-container">
+        <h2>Login</h2>
+        <form id="loginForm">
+            <div class="input-group">
+                <label for="username">Username</label>
+                <input type="text" id="username" name="username" required>
             </div>
-            <div class="project">
-                <h3>Project 2: E-commerce Store</h3>
-                <p>Description of your second project goes here.</p>
-                <a href="#" target="_blank">View Project</a>
+            <div class="input-group">
+                <label for="password">Password</label>
+                <input type="password" id="password" name="password" required>
             </div>
-            <!-- Add more projects here -->
-        </div>
-    </section>
-
-    <!-- Contact Section -->
-    <section id="contact" class="contact">
-        <h2>Contact Me</h2>
-        <p>If you'd like to work with me, feel free to reach out!</p>
-        <form action="submit_form.php" method="POST">
-            <label for="name">Your Name:</label>
-            <input type="text" id="name" name="name" required>
-
-            <label for="email">Your Email:</label>
-            <input type="email" id="email" name="email" required>
-
-            <label for="message">Your Message:</label>
-            <textarea id="message" name="message" rows="4" required></textarea>
-
-            <button type="submit">Send Message</button>
+            <button type="submit">Login</button>
         </form>
-    </section>
-
-    <!-- Footer Section -->
-    <footer>
-        <p>&copy; 2024 [Your Name]. All rights reserved.</p>
-        <p>Follow me on:
-            <a href="https://twitter.com/yourprofile" target="_blank">Twitter</a> |
-            <a href="https://github.com/yourprofile" target="_blank">GitHub</a> |
-            <a href="https://linkedin.com/in/yourprofile" target="_blank">LinkedIn</a>
-        </p>
-    </footer>
+        <p id="error-message" style="color: red; display: none;">Invalid username or password.</p>
+    </div>
 
     <script src="script.js"></script>
 </body>
